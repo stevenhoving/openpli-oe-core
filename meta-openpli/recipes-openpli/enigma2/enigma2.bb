@@ -161,9 +161,11 @@ inherit gitpkgv pythonnative
 PV = "2.7+git${SRCPV}"
 PKGV = "2.7+git${GITPKGV}"
 
-ENIGMA2_BRANCH ?= "master"
+#ENIGMA2_BRANCH ?= "master"
+ENIGMA2_BRANCH ?= "travis-support"
 GITHUB_URI ?= "git://github.com"
-SRC_URI = "${GITHUB_URI}/OpenPLi/${BPN}.git;branch=${ENIGMA2_BRANCH}"
+#SRC_URI = "${GITHUB_URI}/OpenPLi/${BPN}.git;branch=${ENIGMA2_BRANCH}"
+SRC_URI = "${GITHUB_URI}/stevenhoving/enigma2.git;branch=${ENIGMA2_BRANCH}"
 
 S = "${WORKDIR}/git"
 
