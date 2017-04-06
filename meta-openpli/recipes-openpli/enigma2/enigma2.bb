@@ -184,6 +184,9 @@ PKGV_enigma2-fonts = "${PV_enigma2-fonts}"
 PKGR_enigma2-fonts = "${PR_enigma2-fonts}"
 FILES_enigma2-fonts = "${datadir}/fonts"
 
+CFLAGS_append += "-std=c++1y"
+CXXFLAGS_append += "-std=c++1y"
+
 EXTRA_OECONF = "\
 	--with-libsdl=no --with-boxtype=${MACHINE} \
 	--enable-dependency-tracking \
